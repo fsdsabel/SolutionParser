@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 using Onion.SolutionParser.Parser.Model;
 
 namespace Onion.SolutionParser.Parser
@@ -43,9 +44,9 @@ namespace Onion.SolutionParser.Parser
         {
             return new Solution
                 {
-                    Header = (new HeaderParser(_solutionContents)).Parse(),
-                    Global = (new GlobalSectionParser(_solutionContents)).Parse(),
-                    Projects = (new ProjectParser(_solutionContents)).Parse()
+					Header = new List<string>((new HeaderParser(_solutionContents)).Parse()),
+					Global = new List <GlobalSection>( (new GlobalSectionParser(_solutionContents)).Parse()),
+					Projects = new List<Project>((new ProjectParser(_solutionContents)).Parse())
                 };
         }
 

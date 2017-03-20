@@ -4,8 +4,15 @@ namespace Onion.SolutionParser.Parser.Model
 {
     public class Solution : ISolution
     {
-        public IEnumerable<string> Header { get; set; }
-        public IEnumerable<GlobalSection> Global { get; set; }
-        public IEnumerable<Project> Projects { get; set; } 
-    }
+        public IList<string> Header { get; set; }
+        public IList<GlobalSection> Global { get; set; }
+        public IList<Project> Projects { get; set; }
+
+		public Solution()
+		{
+			Header = new List<string>();
+			Global = new List<GlobalSection>();
+			Projects = new List<Project>();
+		}
+	}
 }
