@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.SolutionParser.Parser", "src\Onion.SolutionParser.Parser\Onion.SolutionParser.Parser.csproj", "{91FEF9D7-5376-4EA4-BE09-CFB0EBB083FD}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{07C30C13-23FD-4E39-8877-7B5972875BC1}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.SolutionParser.Tests", "tests\Onion.SolutionParser.Tests\Onion.SolutionParser.Tests.csproj", "{C32A6EE2-57EA-4B2D-A7B5-7AB1840E0404}"
 EndProject
@@ -35,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E1FD3D6-C956-4A20-8C73-4A90EF1B51AE}
 	EndGlobalSection
 EndGlobal

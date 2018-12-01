@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Reflection;
 
 namespace Onion.SolutionParser.Tests
 {
@@ -15,8 +16,8 @@ namespace Onion.SolutionParser.Tests
 
         public static string GetFixturePath(string fileName)
         {
-            var fixturesPath = Path.GetFullPath("Fixtures");
-            return fixturesPath + Path.DirectorySeparatorChar + fileName;
+            var fixturesPath = Path.Combine(Path.GetDirectoryName(typeof(Utility).Assembly.Location), "Fixtures");
+            return Path.Combine(fixturesPath, fileName);
         }
     }
 }

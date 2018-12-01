@@ -11,10 +11,9 @@ namespace Onion.SolutionParser.Tests.Parser
     public class SolutionParserTest
     {
         [Test]
-        [ExpectedException(typeof(FileNotFoundException))]
         public void Constructing_with_unknown_path_throws_exception()
         {
-            var parser = new RealParser.SolutionParser("nope");
+            Assert.Throws<FileNotFoundException>(() => new RealParser.SolutionParser("nope"));
         }
 
         [Test]

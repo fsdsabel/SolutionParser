@@ -13,7 +13,7 @@ namespace Onion.SolutionParser.Tests.Parser
         public GlobalSectionParser Parser { get; set; }
         public string SolutionContents { get; set; }
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void BeforeAll()
         {
             SolutionContents = Utility.GetFixtureContents("NDriven.sln");

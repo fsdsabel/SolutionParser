@@ -13,9 +13,12 @@ namespace Onion.SolutionParser.Parser
         {
             if (! File.Exists(path))
                 throw new FileNotFoundException(string.Format("Solution file {0} does not exist", path));
-            using (var reader = new StreamReader(path))
+            using (var file = File.OpenRead(path))
             {
-                _solutionContents = reader.ReadToEnd();
+                using (var reader = new StreamReader(file))
+                {
+                    _solutionContents = reader.ReadToEnd();
+                }
             }
         }
 
